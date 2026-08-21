@@ -17,7 +17,7 @@ st.write("Sube una imagen aérea tomada por dron o ingresa un enlace web para ev
 def cargar_modelo():
     modelo_path = "modelo_dengue_transfer.keras"
     if os.path.exists(modelo_path):
-        return load_model(modelo_path)
+        return load_model(modelo_path, compile=False)
     return None
 
 modelo = cargar_modelo()
